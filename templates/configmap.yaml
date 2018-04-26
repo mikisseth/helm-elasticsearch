@@ -65,9 +65,6 @@ data:
     indices:
       memory.index_buffer_size: 30%
 
-    index:
-      refresh_interval: 30s
-
     discovery:
       zen:
         ping.unicast.hosts: ${DISCOVERY_SERVICE:}
