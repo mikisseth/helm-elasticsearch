@@ -182,3 +182,8 @@ spec:
       resources:
         requests:
           storage: {{ .Values.master.storage }}
+      {{- if .Values.master.pvSeletors }}
+      selector:
+        matchLabels:
+{{ toYaml .Values.master.pvSeletors | indent 10 }}
+      {{- end }}
